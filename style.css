@@ -1,0 +1,73 @@
+/* === LIGHT MODE === */
+.root {
+    -fx-background-color: rgb(197, 239, 253); /* Light blue background */
+    -fx-text-fill: black;
+}
+
+/* === DARK MODE === */
+.dark-mode {
+    -fx-background-color: rgb(12, 44, 82); /* Deep navy background */
+    -fx-text-fill: white;
+}
+
+/* TextArea stays static white, in both modes */
+.text-area {
+    -fx-control-inner-background: white;
+    -fx-text-fill: black;
+}
+
+/* === BUTTON STYLING === */
+.button {
+    -fx-background-color: #F8F9FA; /* Default background */
+    -fx-text-fill: black;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 2, 0, 1, 1);
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+/* === BUTTON HOVER EFFECT === */
+.button:hover {
+    -fx-background-color: #DEE2E6; /* Subtle gray on hover */
+}
+
+/* Buttons in Dark Mode override */
+.dark-mode .button {
+    -fx-background-color: #F8F9FA;
+    -fx-text-fill: black;
+}
+
+.dark-mode .button:hover {
+    -fx-background-color: #DEE2E6;
+}
+
+/* Optional: Scrollbars (default style) */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 5;
+}
+
+.dark-mode .scroll-bar .thumb {
+    -fx-background-color: #888888;
+}
+/* Status Label Styling */
+#status-label {
+    -fx-font-size: 12px;
+    -fx-padding: 5px 10px;
+    -fx-background-color: #f1f1f1;
+    -fx-text-fill: black;
+}
+
+/* Dark mode styling for status label */
+.dark-mode #status-label {
+    -fx-background-color: #3c3f41;  /* Matches log area background */
+    -fx-text-fill: #f1f1f1;         /* Soft white text */
+}
